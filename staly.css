@@ -1,0 +1,213 @@
+html, body {
+  height: 100%;
+    overscroll-behavior: none;
+}
+
+
+/* remove margens padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fundo */
+body {
+  min-height: 100vh;
+  background: url(./assets/fundo_site.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+
+/* centralizar imagens + tamanho responsivo */
+img {
+  display: block;
+  margin: 20px auto;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.img-lutador {
+  width: 500px ;
+  height: auto ;
+  border-radius: 10px;
+}
+
+/* texto com quebra de linha e espaçamento */
+p {
+  line-height: 1.6;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+a {
+  color: rgb(0, 119, 255);        /* cor dos links */
+  text-decoration: none;
+}
+
+.versite {
+    display: inline-block; /* permite aplicar margin corretamente */
+    margin-right: 40px !important;
+  }
+
+a:hover {
+  color: rgb(0, 247, 255);     /* cor dos links ao passar o mouse */
+}
+.qualquer {
+  font-family: 'Arial', sans-serif;      /* fonte do texto */
+  color: lightblue;
+}
+h1 {
+  font-family: 'Verdana', sans-serif;    /* fonte do título */
+  color: rgb(253, 251, 251);
+}
+h3 {
+  font-family: 'Tahoma', sans-serif;    /* fonte do terceiro título */
+  color: orange;
+}
+h5 {
+  font-family: 'Courier New', monospace; /* fonte do link final */
+  color: yellow;
+}
+
+span {
+  font-family: 'Georgia', serif;         /* fonte do texto extra */
+  color: rgb(247, 19, 3);
+}
+
+#texto {
+  max-width: 800px;       /* largura máxima do bloco de texto */
+  margin: 0 auto;         /* centraliza horizontalmente */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* empilha verticalmente */
+  gap: 20px;              /* espaço entre elementos */
+  background-color: transparent; /* fundo transparente */
+}
+
+.texto:hover{
+        opacity: 80%
+}
+
+/* FUNDO + CENTRALIZAÇÃO DA TELA DE LOGIN */
+#login-container {
+  position: fixed;   /* fica por cima do conteúdo */
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.25); /* opcional: sombra */
+  z-index: 9999;
+}
+
+
+/* CAIXA DO LOGIN */
+#login-box {
+  width: 350px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(8px); /* efeito de vidro */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Título */
+#login-box h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Inputs */
+#login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+/* Botão */
+#login-button {
+  width: 100%;
+  padding: 12px;
+  background: #1e88ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#login-button:hover {
+  background: #1872d9;
+}
+
+.secundario {
+  width: 100%;
+  padding: 12px;
+  background: #1e88ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.secundario:hover {
+  background: #1872d9;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 36px; /* espaçamento entre os ícones */
+  padding: 32px 0; /* espaçamento acima e abaixo */
+}
+
+#social-links a {
+  color: white; /* cor branca padrão */
+  font-size: 28px; /* tamanho dos ícones – mude aqui se quiser maior/menor */
+  transition: all 0.3s ease; /* animação suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Estilo para os ícones de redes sociais */
+#social-links img {
+    width: 25px;   /* largura do ícone */
+    height: 25px;  /* altura do ícone */
+    margin: 0.2px; /* espaçamento entre os ícones */
+    vertical-align: middle; /* alinha melhor com textos, se houver */
+    cursor: pointer; /* muda o cursor ao passar por cima */
+    transition: transform 0.2s; /* efeito ao passar o mouse */
+}
+
+/* Efeito hover (opcional) */
+#social-links img:hover {
+    transform: scale(1.1); /* aumenta 10% ao passar o mouse */
+}
+
+
+/* Mensagem de erro */
+#error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* CONTEÚDO APÓS LOGIN */
+#conteudo {
+  padding: 20px;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGuard</title>
+    <link rel="stylesheet" href="staly.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+</head>
+<body>
+
+
+    <!-- TELA DE LOGIN E CADASTRO -->   
+    <div id="login-container">
+    <div id="login-box">
+        <h2 id="form-title">Login</h2>
+
+        <input type="text" id="user" placeholder="Usuário">
+        <input type="password" id="pass" placeholder="Senha">
+
+        <button id="login-button">Entrar</button>
+
+        <!-- Botão de cadastro -->
+        <button id="toggle-register" class="secundario">
+            Cadastrar
+        </button>
+
+        <br>
+        <!-- icones redirecionando para redes sociais -->
+    <div id="social-links">
+        <a href="https://www.instagram.com/seuusuario" ><img src="./assets/instagram.png" alt="Instagram"></a>
+        <a href="https://github.com/" > <img src="./assets/github.png" alt="spotify"></a>
+        <a href="https://www.linkedin.com/in/seuusuario" ><img src="./assets/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://open.spotify.com/" ><img src="./assets/spotify.png" alt="spotify"></a>
+    </div>
+
+        <br>
+
+        <a href="https://drive.google.com/file/d/1U8twa3PeBLYuyvuxyjC2eXVz4nRhL-kM/view?usp=sharing">
+            Termo de Uso
+        </a>
+
+        <p id="error"></p>
+    </div>
+</div>
+    <!-- FIM DA TELA DE LOGIN E CADASTRO -->
+
+  <div id="conteudo" style="display: none;">
+    <!-- DIV para textos -->
+        <div id="texto">
+    <h1>Tech Guard</h1>
+    <br>
+    <h5 id="unico-2">JIU-JITSU Brasileiro:</h5>
+
+    <p>
+        O jiu-jítsu brasileiro é uma arte marcial, esporte de combate e sistema de autodefesa que foca 
+        principalmente na luta agarrada e no combate no chão. Desenvolvido no Brasil, o jiu-jítsu 
+        (frequentemente abreviado como BJJ, de Brazilian Jiu-Jitsu) enfatiza a importância de usar a técnica, 
+        alavancagem e tempo, ao invés de força bruta, permitindo que um lutador menor e mais fraco supere um 
+        oponente maior e mais forte.
+    </p>
+
+    <a class="versite" href="https://rocketseat.com.br">Ver site</a>
+
+    <img class="img-lutador" src="assets/lutador.jpg" alt="kimono azul com a faixa preta sendo amarrada na cintura." />
+    <!-- <img src="https://picsum.photos/300" alt="Imagem Aleatória" /> -->
+
+    <span>extra</span>
+
+    <h2 class="qualquer">Second title</h2>
+
+    <p>
+        Programação é o processo de criar instruções escritas em uma linguagem 
+        de programação para que um computador realize tarefas específicas.
+        <br>
+        <a href="https://unsplash.com/pt-br/fotografias/computador-portatil-ao-lado-do-monitor-com-teclado-e-mouse-EJMTKCZ00I0">
+            Abrir Site
+        </a>
+    </p>
+
+    <img src="https://picsum.photos/302" alt="Imagem Aleatória" />
+
+    <p>
+        A inteligência artificial (IA) refere-se à simulação de processos de inteligência humana por máquinas, 
+        especialmente sistemas de computador. Esses processos incluem aprendizado (aquisição de informações e regras 
+        para usar essas informações), raciocínio (usar regras para chegar a conclusões aproximadas ou definitivas) e 
+        autocorreção.
+    </p>
+
+    <h3 class="qualquer">Terceiro título</h3>
+
+    <img src="https://picsum.photos/301" alt="Imagem Aleatória" />
+
+    <p>
+        <a href="https://share.google/4gWqaNq4wvsMpnctC">
+            O desenvolvimento web refere-se à criação e manutenção de sites e aplicativos para a internet. 
+            Envolve uma variedade de tarefas, incluindo design, codificação, programação, configuração de servidores 
+            e otimização para mecanismos de busca (SEO).
+        </a>
+    </p>
+    </div>
+    <!-- FIM DA DIV PARA TEXTOS -->
+<script>
+let savedUser = ""; 
+let savedPass = ""; 
+let isRegistering = false; 
+
+document.getElementById("login-button").addEventListener("click", function () {
+    const user = document.getElementById("user").value.trim();
+    const pass = document.getElementById("pass").value.trim();
+
+    /* NÃO permitir campos vazios */
+    if (user === "" || pass === "") {
+        mostrarErro("Preencha todos os campos.");
+        return;
+    }
+
+    /* LOGIN MASTER */
+    if (!isRegistering && user === "pedro-dev" && pass === "123") {
+        entrarNoSite();
+        return;
+    }
+
+    /* MODO CADASTRO */
+    if (isRegistering) {
+        savedUser = user;
+        savedPass = pass;
+
+        alert("Conta criada com sucesso!");
+        trocarParaLogin();
+        return;
+    }
+
+    /* LOGIN NORMAL */
+    if (user === savedUser && pass === savedPass) {
+        entrarNoSite();
+    } else {
+        mostrarErro("Usuário ou senha incorretos.");
+    }
+});
+
+/* BOTÃO CADASTRAR ↔ VOLTAR */
+document.getElementById("toggle-register").addEventListener("click", function () {
+    if (!isRegistering) {
+        isRegistering = true;
+        document.getElementById("form-title").innerText = "Cadastrar";
+        document.getElementById("login-button").innerText = "Registrar";
+        document.getElementById("toggle-register").innerText = "Voltar";
+        limparErro();
+    } else {
+        trocarParaLogin();
+    }
+});
+
+/* VOLTAR PARA LOGIN */
+function trocarParaLogin() {
+    isRegistering = false;
+    document.getElementById("form-title").innerText = "Login";
+    document.getElementById("login-button").innerText = "Entrar";
+    document.getElementById("toggle-register").innerText = "Cadastrar";
+    limparErro();
+}
+
+function mostrarErro(msg) {
+    document.getElementById("error").innerText = msg;
+}
+
+function limparErro() {
+    document.getElementById("error").innerText = "";
+}
+
+function entrarNoSite() {
+    document.getElementById("login-container").style.display = "none";
+    document.getElementById("conteudo").style.display = "block";
+}
+</script>
+
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    
+</body>
+</html>
