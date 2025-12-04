@@ -1,8 +1,7 @@
 html, body {
   height: 100%;
-    overscroll-behavior: none;
+  overscroll-behavior: none;
 }
-
 
 /* remove margens padrão */
 * {
@@ -19,7 +18,9 @@ body {
   color: white;
 }
 
-
+header {
+  text-align: center;
+}
 
 /* centralizar imagens + tamanho responsivo */
 img {
@@ -31,8 +32,8 @@ img {
 }
 
 .img-lutador {
-  width: 500px ;
-  height: auto ;
+  width: 500px;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -44,67 +45,71 @@ p {
 }
 
 a {
-  color: rgb(0, 119, 255);        /* cor dos links */
+  color: rgb(0, 119, 255); 
   text-decoration: none;
 }
 
 .versite {
-    display: inline-block; /* permite aplicar margin corretamente */
-    margin-right: 40px !important;
-  }
+  display: inline-block;
+  margin-right: 40px !important;
+}
 
 a:hover {
-  color: rgb(0, 247, 255);     /* cor dos links ao passar o mouse */
+  color: rgb(0, 247, 255);
 }
-.qualquer {
-  font-family: 'Arial', sans-serif;      /* fonte do texto */
+
+/* .qualquer {
+  font-family: 'Arial', sans-serif;
   color: lightblue;
-}
+} nao estou usando, irei tirar a class do titulo  e 3 */
+
 h1 {
-  font-family: 'Verdana', sans-serif;    /* fonte do título */
+  font-family: 'Verdana', sans-serif;
   color: rgb(253, 251, 251);
 }
+
 h3 {
-  font-family: 'Tahoma', sans-serif;    /* fonte do terceiro título */
-  color: orange;
+  font-family: 'Tahoma', sans-serif;
+  color: white; /*titulo paragrafo*/
 }
+
 h5 {
-  font-family: 'Courier New', monospace; /* fonte do link final */
-  color: yellow;
+  font-family: 'Courier New', monospace;
+  color: yellow; 
 }
 
 span {
-  font-family: 'Georgia', serif;         /* fonte do texto extra */
+  font-family: 'Georgia', serif;
   color: rgb(247, 19, 3);
 }
 
-#texto {
-  max-width: 800px;       /* largura máxima do bloco de texto */
-  margin: 0 auto;         /* centraliza horizontalmente */
+/* Corrigido — agora bate com HTML */
+.texto {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
   display: flex;
-  flex-direction: column; /* empilha verticalmente */
-  gap: 20px;              /* espaço entre elementos */
-  background-color: transparent; /* fundo transparente */
+  flex-direction: column;
+  gap: 20px;
+  background-color: transparent;
 }
 
-.texto:hover{
-        opacity: 80%
-}
+/* .texto:hover {
+  opacity: 80%;
+} */
 
-/* FUNDO + CENTRALIZAÇÃO DA TELA DE LOGIN */
+/* Login background */
 #login-container {
-  position: fixed;   /* fica por cima do conteúdo */
+  position: fixed;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.25); /* opcional: sombra */
+  background: rgba(0,0,0,0.25);
   z-index: 9999;
 }
 
-
-/* CAIXA DO LOGIN */
+/* Caixa do login */
 #login-box {
   width: 350px;
   padding: 30px;
@@ -112,9 +117,25 @@ span {
   border-radius: 12px;
   text-align: center;
   color: white;
-  backdrop-filter: blur(8px); /* efeito de vidro */
+  backdrop-filter: blur(8px);
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
+
+/* Quando logar, aplica um blur SOMENTE no fundo */
+body.fundo-desfocado::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  z-index: -1; /* fica atrás de tudo */
+}
+
+/* Faz o background continuar visível */
+body {
+  position: relative;
+}
+
+
 
 /* Título */
 #login-box h2 {
@@ -122,6 +143,12 @@ span {
   font-size: 26px;
   font-weight: bold;
 }
+
+/* Cores do JIU-JITSU BRASILEIRO */
+.verde { color: green; }
+.amarelo { color: yellow; }
+.azul { color: blue; }
+.branco { color: white; }
 
 /* Inputs */
 #login-box input {
@@ -169,36 +196,32 @@ span {
 
 #social-links {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 36px; /* espaçamento entre os ícones */
-  padding: 32px 0; /* espaçamento acima e abaixo */
+  justify-content: center;
+  gap: 36px;
+  padding: 32px 0;
 }
 
 #social-links a {
-  color: white; /* cor branca padrão */
-  font-size: 28px; /* tamanho dos ícones – mude aqui se quiser maior/menor */
-  transition: all 0.3s ease; /* animação suave */
+  color: white;
+  font-size: 28px;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-/* Estilo para os ícones de redes sociais */
 #social-links img {
-    width: 25px;   /* largura do ícone */
-    height: 25px;  /* altura do ícone */
-    margin: 0.2px; /* espaçamento entre os ícones */
-    vertical-align: middle; /* alinha melhor com textos, se houver */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.2s; /* efeito ao passar o mouse */
+  width: 25px;
+  height: 25px;
+  margin: 0.2px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* Efeito hover (opcional) */
 #social-links img:hover {
-    transform: scale(1.1); /* aumenta 10% ao passar o mouse */
+  transform: scale(1.1);
 }
-
 
 /* Mensagem de erro */
 #error {
@@ -207,7 +230,6 @@ span {
   color: red;
 }
 
-/* CONTEÚDO APÓS LOGIN */
 #conteudo {
   padding: 20px;
 }

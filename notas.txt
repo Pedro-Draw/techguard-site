@@ -1,0 +1,207 @@
+
+Formato organizado (cada tag em bloco; linha em branco entre entradas):
+
+Tag: <a> (elemento de link)
+Exemplo: <a href="https://google.com">Google</a>
+Resultado visual: Google
+Para que serve: Criar links clicáveis para outras páginas ou sites.
+
+Tag: <strong>
+Exemplo: <strong>Importante</strong>
+Resultado visual: Importante
+Para que serve: Dar ênfase forte (negrito com significado – usado por leitores de tela).
+
+Tag: <em>
+Exemplo: <em>ênfase</em>
+Resultado visual: ênfase
+Para que serve: Dar ênfase leve (itálico com significado).
+
+Tag: <b>
+Exemplo: <b>negrito puro</b>
+Resultado visual: negrito puro
+Para que serve: Negrito só visual, sem significado semântico.
+
+Tag: <i>
+Exemplo: <i>itálico puro</i>
+Resultado visual: itálico puro
+Para que serve: Itálico só visual (ex: nomes de filmes, pensamentos).
+
+Tag: <u>
+Exemplo: <u>sublinhado</u>
+Resultado visual: sublinhado
+Para que serve: Texto sublinhado (hoje quase só usado para indicar erros ou links diferentes).
+
+Tag: <mark>
+Exemplo: <mark>destacar</mark>
+Resultado visual: destacar
+Para que serve: Marcar texto como realçado (tipo marca-texto amarelo).
+
+Tag: <del>
+Exemplo: <del>riscado</del>
+Resultado visual: riscado
+Para que serve: Mostrar texto que foi deletado/removido.
+
+Tag: <ins>
+Exemplo: <ins>novo texto</ins>
+Resultado visual: novo texto
+Para que serve: Mostrar texto que foi inserido/adicionado.
+
+Tag: <sup>
+Exemplo: 10<sup>2</sup>
+Resultado visual: 10²
+Para que serve: Sobrescrito (ex: 10², notas de rodapé).
+
+Tag: <sub>
+Exemplo: H<sub>2</sub>O
+Resultado visual: H₂O
+Para que serve: Subscrito (ex: H₂O).
+
+Tag: <h1>
+Exemplo: <h1>Título grande</h1>
+Resultado visual: # Título grande
+Para que serve: Título mais importante da página (só um por página idealmente).
+
+Tag: <h2>
+Exemplo: <h2>Subtítulo</h2>
+Resultado visual: ## Subtítulo
+Para que serve: Títulos de seções.
+
+Tag: <p>
+Exemplo: <p>Parágrafo normal</p>
+Resultado visual: Parágrafo normal
+Para que serve: Texto comum, parágrafos.
+
+Tag: <br>
+Exemplo: <br>
+Resultado visual: (pula linha)
+Para que serve: Quebrar linha sem criar novo parágrafo.
+
+Tag: <hr>
+Exemplo: <hr>
+Resultado visual: ─────────────────────
+Para que serve: Linha horizontal separadora.
+
+Tag: <img>
+Exemplo: <img src="foto.jpg" alt="Minha foto">
+Resultado visual: [imagem aparece aqui]
+Para que serve: Inserir imagens.
+
+Tag: <span>
+Exemplo: <span>parte do texto</span>
+Resultado visual: parte do texto
+Para que serve: Aplicar estilo ou JavaScript em um pedaço pequeno de texto (não quebra linha).
+
+Tag: <div>
+Exemplo: <div>bloco grande</div>
+Resultado visual: bloco grande
+Para que serve: Agrupar conteúdo em blocos (quebra linha antes e depois) – base do layout.
+
+Tag: <header>
+Exemplo: <header>Cabeçalho</header>
+Resultado visual: Cabeçalho
+Para que serve: Topo da página ou de uma seção (logo, menu, etc.).
+
+Tag: <nav>
+Exemplo: <nav>Menu</nav>
+Resultado visual: Menu
+Para que serve: Marcar o menu de navegação principal (melhora SEO e acessibilidade).
+
+Tag: <main>
+Exemplo: <main>Conteúdo principal</main>
+Resultado visual: Conteúdo principal
+Para que serve: Indicar o conteúdo mais importante da página (só um por página).
+
+Tag: <section>
+Exemplo: <section>Sessão</section>
+Resultado visual: Sessão
+Para que serve: Dividir a página em seções temáticas (ex: Sobre, Produtos, Contato).
+
+Tag: <article>
+Exemplo: <article>Notícia ou post</article>
+Resultado visual: Notícia ou post
+Para que serve: Conteúdo independente (ex: post de blog, notícia) que pode ser reutilizado.
+
+Tag: <aside>
+Exemplo: <aside>Barra lateral</aside>
+Resultado visual: Barra lateral
+Para que serve: Conteúdo secundário (anúncios, links relacionados, etc.).
+
+Tag: <footer>
+Exemplo: <footer>Rodapé</footer>
+Resultado visual: Rodapé
+Para que serve: Rodapé da página ou seção (copyright, links, contato).
+
+Tag: <button>
+Exemplo: <button>Clique</button>
+Resultado visual: [Clique]
+Para que serve: Botão clicável (melhor que input para ações personalizadas).
+
+Tag: <input>
+Exemplo: <input type="text">
+Resultado visual: [caixa de digitar]
+Para que serve: Campo para digitar texto, email, senha, etc.
+
+Tag: <textarea>
+Exemplo: <textarea>texto grande</textarea>
+Resultado visual: [caixa grande]
+Para que serve: Campo para textos longos (mensagens, comentários).
+
+Tag: <ul>
+Exemplo: <ul><li>Item</li></ul>
+Resultado visual: • Item
+Para que serve: Lista com bolinhas ou marcadores (não ordenada).
+
+Tag: <ol>
+Exemplo: <ol><li>Primeiro</li></ol>
+Resultado visual: 1. Primeiro
+Para que serve: Lista numerada.
+
+Tag: <blockquote>
+Exemplo: <blockquote>Citação longa</blockquote>
+Resultado visual: Citação longa
+Para que serve: Citação em bloco (com recuo).
+
+Tag: <q>
+Exemplo: <q>Citação curta</q>
+Resultado visual: “Citação curta”
+Para que serve: Citação curta (com aspas automáticas).
+
+Tag: <code>
+Exemplo: <code>document.querySelector()</code>
+Resultado visual: document.querySelector()
+Para que serve: Mostrar código de forma legível (fonte mono espaçada).
+
+Tag: <pre>
+Exemplo: <pre>texto    com     espaços</pre>
+Resultado visual: texto    com     espaços
+Para que serve: Manter espaços e quebras exatamente como foram escritos.
+
+Tag: <table>
+Exemplo: <table>...</table>
+Resultado visual: Tabela com linhas e colunas
+Para que serve: Criar tabelas (dados organizados).
+
+Tag: <form>
+Exemplo: <form>...</form>
+Resultado visual: Formulário
+Para que serve: Criar formulários para envio de dados (login, contato, etc.).
+
+Tag: <link>
+Exemplo: <link rel="stylesheet" href="estilo.css">
+Resultado visual: (não aparece)
+Para que serve: Carregar arquivo CSS externo.
+
+Tag: <script>
+Exemplo: <script src="app.js"></script>
+Resultado visual: (não aparece)
+Para que serve: Carregar JavaScript externo.
+
+Tag: <meta charset>
+Exemplo: <meta charset="UTF-8">
+Resultado visual: (não aparece)
+Para que serve: Definir codificação de caracteres (evita problemas com acentos).
+
+Tag: <meta viewport>
+Exemplo: <meta name="viewport" content="width=device-width">
+Resultado visual: (não aparece)
+Para que serve: Tornar o site responsivo em celular.
