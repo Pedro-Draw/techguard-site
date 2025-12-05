@@ -233,3 +233,38 @@ body {
 #conteudo {
   padding: 20px;
 }
+
+
+.login-header {
+    display: flex;
+    flex-direction: column;     /* coloca um embaixo do outro */
+    align-items: center;        /* centraliza horizontalmente */
+    justify-content: center;    /* centraliza verticalmente (se precisar) */
+    gap: 20px;                  /* espaço entre logo e texto */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#logo img {
+    width: 50px;               /* ajuste o tamanho que quiser */
+    height: auto;
+}
+
+.headerlogin {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+/* Opcional: deixa o container do login mais bonito */
+#login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#login-box {
+    width: 100%;
+    max-width: 400px;
+    /* seus estilos atuais do login-box aqui */
+}
