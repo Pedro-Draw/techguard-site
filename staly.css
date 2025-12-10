@@ -268,3 +268,15 @@ body {
     max-width: 400px;
     /* seus estilos atuais do login-box aqui */
 }
+
+@media (max-width: 768px) {
+  header img{
+    margin:65px 60px 0 0;
+    width: 300px;
+  }
+  p{
+    width: 648px;
+    margin: 15px 10px 20px 10px;
+  }
+}
+
